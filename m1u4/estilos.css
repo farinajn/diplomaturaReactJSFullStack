@@ -1,0 +1,74 @@
+h1 {
+    background-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    padding: 0.5cm;
+}
+
+h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: blue;
+    font-size: 30px;text-align: justify;
+    padding: 0.25cm;
+}
+
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: gray;
+    font-size: 27px;
+    text-align: justify;
+    padding: 0.25cm;
+}
+
+
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+    text-align: justify ;
+    padding left: 0.25cm;
+    
+}
+
+#encuestaGenero{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: chocolate;
+    font-size: 22px;
+    padding-top: 0.5cm;
+    padding-bottom: 0.5cm;
+}
+
+label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;    
+    font-size: 22px;
+        padding-top: 0.5cm;
+        padding-bottom: 0.5cm;
+}
+
+li{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+
+}
+
+.destacados{
+    font-weight: bolder;
+}
+
+#cajaFormulario{
+    padding: 1 cm;
+    background-color: blue;
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+    color: #fff;
+
+}
+
+
+
+
+a:hover {
+    color: darkorange ;
+}
