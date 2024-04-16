@@ -1,0 +1,95 @@
+h1 {
+    background-color: black;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    font-size: 48px;
+    text-align: left;
+    padding-left: 10cm;
+    padding: 0.5cm;
+}
+
+h2{
+    font-family: "Lato", sans-serif;
+    color: blue;
+    font-size: 30px;text-align: justify;
+    padding: 0.25cm;
+}
+
+h3 {
+    font-family: "Lato", sans-serif;
+    color: gray;
+    font-size: 20px;
+    text-align: justify;
+    padding: 0.25cm;
+}
+
+
+p{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    text-align: justify ;
+    padding-left: 0.25cm;
+    
+}
+
+li{
+    font-family: "Lato", sans-serif;
+        font-size: 16px;
+        text-align: justify;
+        padding-left: 0.25cm;
+}
+
+#encuestaGenero{
+    font-family: "Lato", sans-serif;
+        font-size: 16px;
+    background-color: chocolate;
+    padding-top: 0.5cm;
+    padding-bottom: 0.5cm;
+}
+
+label{
+font-family: "Lato", sans-serif;
+    font-weight: bold;    
+    font-size: 16px;
+        padding-top: 0.5cm;
+        padding-bottom: 0.5cm;
+}
+
+.destacados{
+    font-family: "Lato", sans-serif;
+        font-size: 16px;
+
+    font-weight: bolder;
+}
+
+#cajaFormulario{
+    font-family: "Lato", sans-serif;
+        font-size: 16px;
+
+    padding: 1 cm;
+    background-color: blue;
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+    color: #fff;
+
+}
+
+
+
+
+a:hover {
+    color: darkorange ;
+}
+
+.icono {
+    color: blue;
+}
+
+.imagenPerfil{
+    width: 100px;
+}
+
+.logo {
+    width: 188px;
+    height: 60px;
+}
