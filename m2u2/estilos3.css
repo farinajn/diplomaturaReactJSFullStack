@@ -1,0 +1,42 @@
+#container {
+    background-color: white;
+    border: 2px solid;
+    display: flex;
+    justify-content: space-between;
+
+} 
+
+#rojo {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-content: center;
+    text-align: center;
+    color: white;
+    }
+
+#verde {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-content: center;
+    text-align: center;
+    color: white;
+
+}
+
+#azul {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+        font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-content: center;
+    text-align: center;
+    color: white;
+
+}

@@ -1,0 +1,51 @@
+#container {
+  margin: 0 auto;
+  width: fit-content;
+  background-color: white;
+  border: 2px solid;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+#rojo {
+  background-color: red;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  width: 200px;
+  height: 200px;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  align-content: center;
+  text-align: center;
+  color: white;
+}
+
+#verde {
+  background-color: green;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  width: 200px;
+  height: 200px;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  align-content: center;
+  text-align: center;
+  color: white;
+}
+
+#azul {
+  background-color: blue;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  width: 200px;
+  height: 200px;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  align-content: center;
+  text-align: center;
+  color: white;
+}
