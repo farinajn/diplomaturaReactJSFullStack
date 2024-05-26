@@ -1,6 +1,12 @@
+header {
+  background-color: white;
+}
+
 header h1 {
   font-style: italic;
   font-weight: 350;
+  display: inline;
+  position: relative;
 }
 
 body {
@@ -39,6 +45,21 @@ nav ul a:hover {
 .holder {
   max-width: 1024px;
   margin: auto;
+}
+
+footer {
+  background-color: grey;
+  color: #333;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.logo {
+  padding: 2px;
+  max-width: 30%;
+  height: auto;
+  opacity: 50%;
 }
 
 @media (max-width: 550px) {
