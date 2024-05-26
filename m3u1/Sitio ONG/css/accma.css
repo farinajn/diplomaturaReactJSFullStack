@@ -1,3 +1,53 @@
+header h1 {
+  font-style: italic;
+  font-weight: 350;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  background-color: black;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  flex-grow: 1;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  padding: 3px 3px;
+  display: block;
+  text-align: center;
+  font-weight: 250;
+}
+
+nav ul a:hover {
+  color: chartreuse;
+  background-color: grey;
+}
+
+.holder {
+  max-width: 1024px;
+  margin: auto;
+}
+
+@media (max-width: 550px) {
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
