@@ -6,6 +6,7 @@ header {
 
 header h1 {
   font-style: italic;
+  font-size: 20pt;
   font-weight: 350;
   display: inline;
   position: relative;
@@ -45,6 +46,33 @@ nav ul a {
   font-weight: 250;
 }
 
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+footer ul li {
+  flex-grow: 1;
+}
+
+footer ul a {
+  color: white;
+  text-decoration: none;
+  padding: 3px 3px;
+  display: block;
+  text-align: center;
+  font-weight: 250;
+}
+
+footer ul img {
+  padding: 2px;
+  max-width: 5%;
+  height: auto;
+  opacity: 75%;
+}
+
 nav ul a:hover {
   color: chartreuse;
   background-color: grey;
@@ -58,6 +86,13 @@ nav ul a:hover {
   margin: auto;
 }
 /*Class = Holder final*/
+
+/*Class = Activo inicio*/
+.activo {
+  max-width: 1024px;
+  margin: auto;
+}
+/*Class = Activo final*/
 
 /*footer inicio*/
 footer {
@@ -73,12 +108,19 @@ footer {
 /*Logo inicio*/
 .logo {
   padding: 2px;
-  max-width: 30%;
+  max-width: 17%;
   height: auto;
   opacity: 50%;
 }
 /*footer final*/
 
+/*id container en el nav*/
+nav #container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+/*media queries*/
 @media (max-width: 550px) {
   nav ul {
     list-style: none;
