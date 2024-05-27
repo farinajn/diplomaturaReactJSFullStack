@@ -1,3 +1,5 @@
+/*Header inicio*/
+
 header {
   background-color: white;
 }
@@ -9,10 +11,16 @@ header h1 {
   position: relative;
 }
 
+/*Header final*/
+
+/*Body inicio*/
 body {
   font-family: "Montserrat", sans-serif;
 }
 
+/*Body final*/
+
+/*Nav inicio*/
 nav {
   background-color: black;
 }
@@ -42,11 +50,16 @@ nav ul a:hover {
   background-color: grey;
 }
 
+/*Nav final*/
+
+/*Class = Holder inicio*/
 .holder {
   max-width: 1024px;
   margin: auto;
 }
+/*Class = Holder final*/
 
+/*footer inicio*/
 footer {
   background-color: grey;
   color: #333;
@@ -55,12 +68,16 @@ footer {
   margin-top: 10px;
 }
 
+/*footer final*/
+
+/*Logo inicio*/
 .logo {
   padding: 2px;
   max-width: 30%;
   height: auto;
   opacity: 50%;
 }
+/*footer final*/
 
 @media (max-width: 550px) {
   nav ul {
