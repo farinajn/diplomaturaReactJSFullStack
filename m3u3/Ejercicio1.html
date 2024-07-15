@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Farina Juan Natanael - M3U3 - JavaScript y maquetado avanzado</title>
+  </head>
+
+  <body>
+    <script>
+      var distancia = parseInt(
+        prompt("Ingrese la distancia a recorrer expresada en metros", "")
+      );
+      if (distancia === 0) {
+        document.write(`Ingrese una distancia mayor a cero`);
+      } else if (distancia > 0 && distancia < 1001) {
+        document.write(`son ${distancia} metros, lo mejor es ir a pie`);
+      } else if (distancia > 1000 && distancia < 10001) {
+        document.write(`son ${distancia} metros, lo mejor es ir en bicicleta`);
+      } else if (distancia > 10000 && distancia < 30001) {
+        document.write(`son ${distancia} metros, lo mejor es ir en colectivo`);
+      } else if (distancia > 30000 && distancia < 100001) {
+        document.write(`son ${distancia} metros, lo mejor es ir en auto`);
+      } else {
+        document.write(`son ${distancia} metros, lo mejor es ir en avion`);
+      }
+    </script>
+  </body>
+</html>
