@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Farina Juan Natanael - M3U3 - JavaScript y maquetado avanzado</title>
@@ -7,15 +7,20 @@
 
   <body>
     <script>
-      const valor1 = prompt("Ingrese primer número:", "");
-      const valor2 = prompt("Ingrese segundo número", "");
-
-      const suma = parseInt(valor1) + parseInt(valor2);
-      const producto = valor1 * valor2;
-
-      console.log("La suma es " + suma);
-      console.log(`La suma es ${suma} y el producto es ${producto}`);
-      document.write(`La suma es ${suma} y el producto es ${producto}`);
+      const numeros = [];
+      var numero1 = parseInt(prompt("Ingrese un numero mayor que cero", ""));
+      numeros.push(numero1);
+      var numero2 = parseInt(prompt("Ingrese otro numero mayor que cero", ""));
+      numeros.push(numero2);
+      var numero3 = parseInt(prompt("Ingrese otro numero mayor que cero", ""));
+      numeros.push(numero3);
+      var numero4 = parseInt(prompt("Ingrese otro numero mayor que cero", ""));
+      numeros.push(numero4);
+      document.write(
+        `Los elementos del array son: ${numeros}, y el mayor de ellos es: ${Math.max(
+          ...numeros
+        )}`
+      );
     </script>
   </body>
 </html>
