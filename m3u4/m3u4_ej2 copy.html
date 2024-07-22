@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const textarea = document.getElementById("textarea");
+        const charCount = document.getElementById("charCount");
+
+        textarea.addEventListener("input", () => {
+          const count = textarea.value.length;
+          charCount.textContent = `${count} caracteres`;
+        });
+      });
+    </script>
+  </head>
+  <body style="background-color: orange">
+    <div class="container">
+      <textarea
+        id="textarea"
+        placeholder="Escribe algo..."
+        rows="10"
+        cols="50"
+      ></textarea>
+      <div id="charCount">0 caracteres</div>
+    </div>
+  </body>
+</html>
