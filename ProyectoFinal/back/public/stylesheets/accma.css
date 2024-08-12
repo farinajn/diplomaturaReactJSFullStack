@@ -1,0 +1,133 @@
+/*Header inicio*/
+
+header {
+  background-color: white;
+}
+
+header h1 {
+  font-style: italic;
+  font-size: 20pt;
+  font-weight: 350;
+  display: inline;
+  position: relative;
+}
+
+/*Header final*/
+
+/*Body inicio*/
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*Body final*/
+
+/*Nav inicio*/
+nav {
+  background-color: black;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  flex-grow: 1;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  padding: 3px 3px;
+  display: block;
+  text-align: center;
+  font-weight: 250;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+footer ul li {
+  flex-grow: 1;
+}
+
+footer ul a {
+  color: white;
+  text-decoration: none;
+  padding: 3px 3px;
+  display: block;
+  text-align: center;
+  font-weight: 250;
+}
+
+footer ul img {
+  padding: 2px;
+  max-width: 5%;
+  height: auto;
+  opacity: 75%;
+}
+
+nav ul a:hover {
+  color: chartreuse;
+  background-color: grey;
+}
+
+/*Nav final*/
+
+/*Class = Holder inicio*/
+.holder {
+  max-width: 1024px;
+  margin: auto;
+}
+/*Class = Holder final*/
+
+/*Class = Activo inicio*/
+.activo {
+  max-width: 1024px;
+  margin: auto;
+}
+/*Class = Activo final*/
+
+/*footer inicio*/
+footer {
+  background-color: grey;
+  color: #333;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+/*footer final*/
+
+/*Logo inicio*/
+.logo {
+  padding: 2px;
+  max-width: 17%;
+  height: auto;
+  opacity: 50%;
+}
+/*footer final*/
+
+/*id container en el nav*/
+nav #container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+/*media queries*/
+@media (max-width: 550px) {
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

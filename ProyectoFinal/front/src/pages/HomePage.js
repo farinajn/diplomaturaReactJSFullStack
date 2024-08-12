@@ -1,8 +1,10 @@
+import "../styles/home.css";
+
 const HomePage = (props) => {
   return (
     <main className="holder">
       <div className="homeimg">
-        <img src="/front/public/img/home/logo ACCMA.jpg" alt="logoACCMA" />
+        <img src="/public/img/home/logoACCMA.jpg" alt="logoACCMA" />
       </div>
     </main>
   );

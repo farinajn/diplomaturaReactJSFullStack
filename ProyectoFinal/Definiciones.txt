@@ -1,0 +1,32 @@
+Lo que quiero hacer es un sitio con un home, un login común a todos los tipos de usuarios (admin del sitio, usuarios/socios, usuarios médicos)
+
+Pagina 1 - Home
+
+Pagina 2 - Login
+
+Pagina 3 - Admin del sitio ABM usuarios, ABM médicos, ABM patologías, ABM noticias, ABM novedades, 
+
+Pagina 4 - Home usuario
+Historia clínica (Historial de consultas y seguimiento) y Perfil del usuario (datos del socio)
+Mailing para solicitar consulta.
+
+
+Desarrollar y diseñar un sitio utilizando todo lo aprendido en el curso. Para aprobar el curso el proyecto deberá tener las siguientes características.
+
+- Contar con al menos 4 secciones distintas
+- El frontend debe estar desarrrollado en React.js.
+- Implementar Node.js como lenguaje de servidor y Handlebars como motor de plantillas.
+- Enviar mails mediante un formulario.
+- Realizar las 4 operaciones básicas de las bases de datos: leer, escribir, modificar y eliminar registros de una tabla.
+- El sitio o aplicación debe ser totalmente navegable.
+
+
+Formato de entrega
+
+La entrega del proyecto se realizará mediante un link al repositorio de Github donde se haya realizado el desarrollo. Esto incluye el archivo package.json con las dependencias y un archivo SQL con la base de datos exportada. No incluir la carpeta node_modules.
+
+Se deberá entregar también un video donde se recorran las secciones principales y se muestren todas las características funcionando. Este video puede ser subido a Youtube o alguna plataforma similar.
+
+FECHA DE ENTREGA: 28/08/2024
+
+FECHA DE RECUPERATORIO: 04/09/2024
