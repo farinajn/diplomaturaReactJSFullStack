@@ -5,7 +5,9 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
 //Declaration of express session variable
-const session = require("express-session");
+var session = require("express-session");
+
+require("dotenv").config();
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
@@ -27,7 +29,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //Use of express session variable
 app.use(
   session({
-    secret: "!@#!@$!2#^&accma!@#$%^1@#$!23",
+    secret: "accma123...",
     resave: false,
     saveUninitialized: true,
   })
@@ -37,9 +39,17 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/admin/login", adminLoginRouter);
 
+const pool = require("./models/bd");
+
+//select - consulta a la base de datos
+pool.query("select * from usuarios").then(function (resultados) {
+  console.log(resultados);
+});
+
 // Login GET
 app.get("/", function (req, res) {
   var conocido = Boolean(req.session.nombre);
+  console.log(conocido);
 
   res.render("index", {
     title: "Inicio de sesión y captura de datos con Express",
