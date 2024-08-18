@@ -1,1 +1,30 @@
-<h1>Hola soy la pagina de login, proximamente se estara habilitando para su utilizacion</h1>
+<div class="container">
+<div class="row">
+<form action="/admin/login" method="post">
+    <div class="col-12">
+        <label class="visually-hidden" for="inlineFormInputGroupUsername">Usuario</label>
+        <div class="input-group">
+            <input type="text" class="form-control" id="inputUser" placeholder="Usuario" name="usuario">
+        </div>
+    </div>
+    <div class="col-12">
+        <label class="visually-hidden" for="inlineFormInputGroupUsername">Password</label>
+        <div class="input-group">
+            <input type="text" class="form-control" id="inputPassword" placeholder="Password" name="password">
+        </div>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+    </div>
+</form>
+
+{{#if error}}
+
+<p>Usuario y/o contraseña incorrectos</p>
+
+{{/if}}
+
+
+</div>
+</div>

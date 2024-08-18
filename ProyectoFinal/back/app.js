@@ -5,13 +5,14 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
 //Declaration of express session variable
-var session = require("express-session");
-
 require("dotenv").config();
+
+var session = require("express-session");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const adminLoginRouter = require("./routes/admin/login");
+const adminNewsRouter = require("./routes/admin/novedades");
 const { title } = require("process");
 
 const app = express();
@@ -30,14 +31,29 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(
   session({
     secret: "accma123...",
+    cookie: { maxAge: null },
     resave: false,
     saveUninitialized: true,
   })
 );
 
+secured = async (req, res, next) => {
+  try {
+    console.log(req.session.id_usuario);
+    if (req.session.id_usuario) {
+      next();
+    } else {
+      res.redirect("/admin/login");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/admin/login", adminLoginRouter);
+app.use("/admin/novedades", secured, adminNewsRouter);
 
 const pool = require("./models/bd");
 
