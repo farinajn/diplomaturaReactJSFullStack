@@ -1,0 +1,24 @@
+<div class="container" style="margin: 100px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h1>Detalle de una novedad</h1>
+            <form >
+                <h3>Novedad nro: {{novedad.id}}</h3>
+                <input type="hidden" value="{{novedad.id}}" name="id">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Titulo" value="{{novedad.titulo}}"
+                        name="titulo" disabled>
+                </div>
+                <div class="form-group">
+                    <textarea type='text' class="form-control" placeholder="Subtitulo"
+                        name="subtitulo" disabled>{{novedad.subtitulo}}</textarea>
+                </div>
+                <div class="form-group">
+                    <textarea type='text' class="form-control" placeholder="Cuerpo"
+                        name="cuerpo" disabled>{{novedad.cuerpo}}</textarea>
+                </div>
+                <a class="btn btn-primary" href="/admin/novedades">Volver<i class="fa-solid fa-circle-left"></i></a>
+            </form>
+        </div>
+    </div>
+</div>

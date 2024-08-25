@@ -60,4 +60,53 @@ router.get("/eliminar/:id", async (req, res, next) => {
   }
 });
 
+router.get("/modificar/:id", async (req, res, next) => {
+  let { id } = req.params;
+  let novedad = await novedadesModel.getNovedadesById(id);
+  res.render("admin/novedades/modificar", {
+    layout: "admin/layout",
+    novedad,
+  });
+});
+
+router.post("/modificar", async (req, res, next) => {
+  try {
+    let obj = {
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      cuerpo: req.body.cuerpo,
+    };
+    if (
+      req.body.titulo != "" &&
+      req.body.subtitulo != "" &&
+      req.body.cuerpo != ""
+    ) {
+      await novedadesModel.modificarNovedadById(obj, req.body.id);
+      res.redirect("/admin/novedades");
+    } else {
+      res.render("/admin/novedades/modificar/:id", {
+        layout: "admin/layout",
+        error: true,
+        message: "Todos los campos son requeridos",
+      });
+    }
+  } catch (error) {
+    console.log(error);
+    res.render("/admin/novedades/modificar/:id", {
+      layout: "admin/layout",
+      error: true,
+      message: "No se cargo la novedad",
+    });
+  }
+});
+
+router.get("/detalle/:id", async (req, res, next) => {
+  let { id } = req.params;
+  let novedad = await novedadesModel.getNovedadesById(id);
+  res.render("admin/novedades/detalle", {
+    layout: "admin/layout",
+    novedad,
+  });
+});
+
 module.exports = router;
