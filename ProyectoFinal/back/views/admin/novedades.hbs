@@ -35,8 +35,9 @@
                                         <td>{{this.titulo}}</td>
                     <td>{{this.subtitulo}}</td>
                     <td class="text-center">
-                        <a href="Editar" class="btn btn-secondary"><i class="fa fa-pencil"></i></a>
-                        <a href="/admin/novedades/eliminar/{{this.id}}" class="btn btn-danger" onclick="return confirm" ("¿Estás seguro de eliminar esta novedad?");><i class="fa fa-trash"></i></a>
+                        <a href="/admin/novedades/modificar/{{this.id}}" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen"></i></a>
+                        <a href="/admin/novedades/eliminar/{{this.id}}" class="btn btn-danger"
+                            onclick="return confirm('¿Estás seguro de eliminar esta novedad?');"><i class="fa fa-trash-o"></i></a>
                     </td>
                 </tr>
                 {{/each}}
