@@ -7,7 +7,9 @@ const logger = require("morgan");
 //Declaration of express session variable
 require("dotenv").config();
 
-var session = require("express-session");
+let session = require("express-session");
+
+let fileUpload = require("express-fileupload");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
@@ -50,53 +52,19 @@ secured = async (req, res, next) => {
   }
 };
 
+app.use(
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: "/tmp/",
+  })
+);
+
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/admin/login", adminLoginRouter);
 app.use("/admin/novedades", secured, adminNewsRouter);
 
 const pool = require("./models/bd");
-
-//select - consulta a la base de datos
-pool.query("select * from usuarios").then(function (resultados) {
-  console.log(resultados);
-});
-
-/*
-var id = 20;
-var obj = {
-  nombre: "Natanael",
-};
-pool
-  .query("update usuarios set ? where id=?", [obj, id])
-  .then(function (resultados) {
-    console.log(resultados);
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
-*/
-
-/*
-//Insert a la BD
-var obj = {
-  nombre: "prueba insert",
-  apellido: "apellido",
-  edad: "1000",
-  mail: "prueba@insert.com",
-};
-
-pool.query("insert into usuarios set ?", [obj]).then(function (resultados) {
-  console.log(resultados);
-});
-
-*/
-
-/*
-var id = 8;
-pool.query("delete from usuarios where id=?", [id]).then(function (resultados) {
-  console.log(resultados);
-});*/
 
 // Login GET
 app.get("/", function (req, res) {
