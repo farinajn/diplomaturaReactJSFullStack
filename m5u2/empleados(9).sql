@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 18-08-2024 a las 22:56:00
+-- Tiempo de generación: 19-08-2024 a las 02:51:06
 -- Versión del servidor: 5.00.15
 -- Versión de PHP: 5.4.3
 
@@ -17,29 +17,35 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `proyecto_final`
+-- Base de datos: `m5u2`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Estructura de tabla para la tabla `empleados`
 --
 
-CREATE TABLE IF NOT EXISTS `usuarios` (
+CREATE TABLE IF NOT EXISTS `empleados` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `usuario` varchar(250) NOT NULL,
-  `password` char(32) NOT NULL,
+  `nombre` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `apellido` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `trabajo` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `edad` int(3) DEFAULT NULL,
+  `salario` int(12) DEFAULT NULL,
+  `mail` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=22 ;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Volcado de datos para la tabla `empleados`
 --
 
-INSERT INTO `usuarios` (`id`, `usuario`, `password`) VALUES
-(1, 'farinajn', '81dc9bdb52d04dc20036dbd8313ed055'),
-(2, 'socio', '81dc9bdb52d04dc20036dbd8313ed055');
+INSERT INTO `empleados` (`nombre`, `apellido`) VALUES
+('Eduardo', 'Sacan'),
+('Paublo', 'Simon'),
+('Monica', 'Sanchez'),
+('Alicia', 'Simlai');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

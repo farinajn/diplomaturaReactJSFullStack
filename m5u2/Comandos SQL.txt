@@ -1,0 +1,52 @@
+SELECT nombre, trabajo
+FROM empleados;
+
+SELECT nombre, trabajo
+FROM empleados;
+
+SELECT nombre, trabajo
+FROM empleados 
+WHERE trabajo like '%programador%';
+
+SELECT nombre
+FROM empleados 
+WHERE edad >30;
+
+SELECT apellido, mail
+FROM empleados 
+WHERE nombre = "juan";
+
+SELECT nombre
+FROM empleados
+WHERE trabajo LIKE '%Programador%' OR trabajo LIKE '%Desarrollador Web%';
+
+SELECT id, nombre, apellido, trabajo
+FROM empleados
+WHERE id > 14 AND id <21;
+
+SELECT nombre
+FROM empleados
+WHERE salario < 800000;
+
+SELECT nombre, salario
+FROM empleados
+WHERE salario >= 75000 AND salario <= 90000;
+
+SELECT nombre, apellido
+FROM empleados
+WHERE apellido LIKE 'S%';
+
+SELECT nombre
+FROM empleados
+WHERE nombre LIKE '%l';
+
+INSERT INTO empleados (id, nombre, apellido, trabajo, edad, salario, mail) VALUES 
+(22, 'Franciso', 'Perez', 'Programador', 26, 90000, 'franciso@bignet.com');
+
+DELETE FROM empleados
+WHERE nombre = 'Hernan' AND apellido = 'Rosso';
+
+UPDATE empleados
+SET salario = 90000
+WHERE nombre = 'Daniel' AND apellido = 'Gutierrez';
+

@@ -1,16 +1,25 @@
+Un buen ejemplo en cuanto a diseño y un poco el contenido legal
+https://clubcannabicobuenosaires.com/geneticas/#NORMATIVAS
+https://www.cruzverdeclub.com/
+https://cannabissocialclubar.com/ (Este esta muy bueno!)
+
+
+
 Lo que quiero hacer es un sitio con un home, un login común a todos los tipos de usuarios (admin del sitio, usuarios/socios, usuarios médicos)
 
-Pagina 1 - Home
+Pagina 1 - Home ACCMA - Puede solicitar una consulta algún no paciente
 
 Pagina 2 - Login
 
-Pagina 3 - Admin del sitio ABM usuarios, ABM médicos, ABM patologías, ABM noticias, ABM novedades, 
+Pagina 3 - Admin del sitio ABM usuarios, ABM médicos, ABM patologías, ABM novedades, ABM estudios, 
 
-Pagina 4 - Home usuario
+Pagina 4 - Usuario home page
 Historia clínica (Historial de consultas y seguimiento) y Perfil del usuario (datos del socio)
 Mailing para solicitar consulta.
 
+Pagina 5 (si llego, sino queda en construcción) información de Genéticas y derivados - Aceite - Crema tópica
 
+Consigna
 Desarrollar y diseñar un sitio utilizando todo lo aprendido en el curso. Para aprobar el curso el proyecto deberá tener las siguientes características.
 
 - Contar con al menos 4 secciones distintas
@@ -30,3 +39,6 @@ Se deberá entregar también un video donde se recorran las secciones principale
 FECHA DE ENTREGA: 28/08/2024
 
 FECHA DE RECUPERATORIO: 04/09/2024
+
+
+Local host 3000 va para react, no para express. Estamos empezando a integrar front con back

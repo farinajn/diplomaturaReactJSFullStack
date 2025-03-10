@@ -3,13 +3,12 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const fileUpload = require("express-fileupload");
 
 //Declaration of express session variable
 require("dotenv").config();
 
 let session = require("express-session");
-
-let fileUpload = require("express-fileupload");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");

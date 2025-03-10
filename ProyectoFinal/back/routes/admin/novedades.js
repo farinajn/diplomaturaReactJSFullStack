@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const novedadesModel = require("./../../models/novedadesModel");
-const util = require("util");
 const { default: cluster } = require("cluster");
+const util = require("util");
 const cloudinary = require("cloudinary").v2;
-
 const uploader = util.promisify(cloudinary.uploader.upload);
+const destroy = util.promisify(cloudinary.uploader.destroy);
 
-/* GET users listing. */
+/* GET novedades all */
 router.get("/", async function (req, res, next) {
   var novedades = await novedadesModel.getNovedades();
   res.render("admin/novedades", {
@@ -29,7 +29,7 @@ router.get("/agregar", (req, res, next) => {
 /*POST to insert a new Novedad*/
 router.post("/agregar", async (req, res, next) => {
   try {
-    let img_id = "";
+    var img_id = "";
     if (req.files && Object.keys(req.files).length > 0) {
       imagen = req.files.imagen;
       img_id = (await uploader(imagen.tempFilePath)).public_id;
@@ -66,6 +66,9 @@ router.get("/eliminar/:id", async (req, res, next) => {
   var { id } = req.params;
   try {
     await novedadesModel.deleteNovedadById(id);
+    if (novedad.img_id) {
+      await destroy(novedad.img_id);
+    }
     res.redirect("/admin/novedades");
   } catch (error) {
     console.log(error);
@@ -84,10 +87,27 @@ router.get("/modificar/:id", async (req, res, next) => {
 
 router.post("/modificar", async (req, res, next) => {
   try {
+    let img_id = req.body.img_original;
+    let borrar_img_vieja = false;
+    if (req.body.img_delete === "1") {
+      img_id = null;
+      borrar_img_vieja = true;
+    } else {
+      if (req.files && Object.keys(req.files).length > 0) {
+        imagen = req.files.imagen;
+        img_id = (await uploader(imagen.tempFilePath)).public_id;
+        borrar_img_vieja = true;
+      }
+    }
+    if (borrar_img_vieja && req.body.img_original) {
+      await destroy(req.body.img_original);
+    }
+
     let obj = {
       titulo: req.body.titulo,
       subtitulo: req.body.subtitulo,
       cuerpo: req.body.cuerpo,
+      img_id,
     };
     if (
       req.body.titulo != "" &&
@@ -125,11 +145,12 @@ router.get("/detalle/:id", async (req, res, next) => {
 //GET para las imagenes
 router.get("/", async function (req, res, next) {
   const novedades = await novedadesModel.getNovedades();
+  console.log("img_id");
   novedades = novedades.map((novedad) => {
     if (novedad.img_id) {
       const imagen = cloudinary.image(novedad.img_id, {
-        width: 100,
-        height: 100,
+        width: 70,
+        height: 70,
         crop: "fill",
       });
       return {

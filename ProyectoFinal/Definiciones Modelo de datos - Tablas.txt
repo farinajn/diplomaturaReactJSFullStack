@@ -1,0 +1,86 @@
+Lo que quiero hacer es un sitio con un home, un login común a todos los tipos de usuarios (admin del sitio, usuarios/socios, usuarios médicos)
+
+Pagina 1 - Home ACCMA - Puede solicitar una consulta algún no paciente
+
+Pagina 2 - Login
+
+Pagina 3 - Admin del sitio ABM usuarios, ABM médicos, ABM patologías, ABM novedades, ABM estudios, 
+
+Pagina 4 - Usuario home page
+Historia clínica (Historial de consultas y seguimiento) y Perfil del usuario (datos del socio)
+Mailing para solicitar consulta.
+
+Pagina 5 (si llego, sino queda en construcción) información de derivados - Aceite - Crema tópica
+
+
+Tabla de usuarios
+ID Autoincremental Primary Key
+Rol (Admin, Socio/paciente, Medico)
+
+Paciente
+ID (Mismo que el de la tabla de usuarios?)
+Nombre
+Apellido
+Genero
+Edad
+DNI
+Patologías que tiene (puede seleccionar varias)
+REPROCANN (Si es paciente)
+Fecha alta
+Historial de consultas
+Historial de turnos
+Historial de resultados
+
+Médicos
+ID 
+Especialidad (Si es médico)
+Matricula (Si es médico)
+Nombre
+Apellido
+Genero
+Edad
+DNI
+Patologías que trata (puede seleccionar varias)
+Fecha alta
+Historial de consultas y resultados
+
+Funcionamiento y flujo de la página:
+Una persona se asocia online.
+Esa persona carga una solicitud de consulta.
+Un médico es dado de alta por el admin o se da de alta y el admin lo habilita.
+Un socio/a carga una solicitud de consulta. 
+Un médico, que recibe la solicitud por mail cuando el paciente la envia,genera un turno. Entra a la solicitud de consulta y genera una orden de consulta (Turno)
+El turno, puede concretarse o no, que se puede cancelar o dar como que no se presentó. (O sea, tiene un cierre)
+Luego, cuando el turno se concreta, se carga un resultado del turno.
+
+Tabla de solicitudes de consulta
+ID solicitud de consulta
+Especialidad a consultar
+Médico a consultar
+Motivo consulta/ solicitud
+Turno dentro de: La semana, el mes, tres meses
+
+Tabla de ordenes de consultas (Turno)
+ID orden de consulta 
+ID solicitud de consulta (Se necesita una para poder abrir una consulta)
+Fecha recepción
+Fecha emisión
+ID paciente
+ID médico
+Fecha turno
+Motivo consulta
+
+Tabla de resultados de consulta:
+ID resultado de consulta
+ID orden de consulta
+Fecha emisión
+ID paciente
+ID médico
+Fecha resultado
+Resultado
+
+-- 
+
+
+
+
